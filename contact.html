@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+<style type="text/css">
+    textarea {
+        resize: none;
+    }
+	label.error {
+	color: red;
+	}
+	.failure {color: white; background: #f47a42;}
+	.success {color: white; background: #41f4d0;}
+	.failure, .success {
+		color: white; 
+		padding: 1em; 
+		font-family: sans-serif;
+	}
+</style>
+</head>
+<body>
+	<div class="nav">
+	  <input type="checkbox">
+	    <span></span>
+	    <span></span>
+	    <div class="menu">
+	      <li><a href="index.html">home</a></li>
+	      <li><a href="courses/courses.html">courses</a></li>
+	      <li><a href="timetable.php">timetable</a></li>
+	      <li><a href="contact.html">contact</a></li>
+	      <li><a href="#">about</a></li>
+	    </div>
+	</div>
+<div id="feedback">
+<span></span>
+</div>
+<section class="get-in-touch">
+<form class="cForm contact-form row" id="commentForm" method="post" action="phpmailer.php">
+
+<p>
+<br>
+    <div class="form-field col x-50">
+         <input id="firstname" name="firstname" class="input-text js-input" type="text" required>
+         <label class="label" for="name">First Name</label>
+      </div>
+	<div id="fnameError"></div>
+</p>
+<p>
+    
+    <div class="form-field col x-50">
+         <input id="lastname" name="lastname" class="input-text js-input" type="text" required>
+         <label class="label" for="name">Last Name</label>
+      </div>
+	<div id="lnameError"></div>
+</p>
+<p>
+    
+    <div class="form-field col x-50">
+         <input id="email" name="email" class="input-text js-input" type="email" required>
+         <label class="label" for="email">E-mail</label>
+      </div>
+	<div id="emailError"></div>
+</p>
+<p>
+    <div class="form-field col x-100 align-center">
+	    <textarea id="comment" name="comment" class="input-text js-input" rows=10 cols=50 placeholder="What would you like to say?"></textarea>
+	    <label for="comment" class="label">Comment</label>
+	</div>
+	<div id="commentError"></div>
+</p>
+<p>
+	<div class="form-field col x-100 align-center">
+         <input class="submit-btn" type="submit" value="Submit">
+      </div>
+	</p>
+</form>
+</section>
+
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="assets/js/validate.js"></script>
+</body>
+</html>
